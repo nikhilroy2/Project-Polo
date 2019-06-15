@@ -1,0 +1,1107 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:100,200,400,500,600,700,800|Open+Sans:300,400,800,700,600|Nunito:300,400,600,700,800');
+
+* {
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+:root{
+    font-size: 1em;
+    font-family: Poppins,Helvetica,Arial,sans-serif ;
+    background: #fff;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+}
+.wrapper_992{
+    min-width: 992px!important;
+}
+header{
+    height: 800px;
+    background: url("../images/bg-v4_new.jpg");
+    z-index: 2000;
+    position: relative;
+}
+nav{
+    background: black;
+    z-index: 111111111;
+}
+nav ul{
+    list-style-type: none;/* for header ul all none list*/
+ 
+}
+.nav_ul{
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-flow: row wrap;
+    list-style-type: none;
+    padding: 0px 35px;
+    color: #fff;
+}
+.nav_ul .nav_icon{
+    width: 100px;
+}
+.nav_icon >a {
+    display: inline-block;
+}
+.nav_icon >a > img{
+    width: 100%;
+    height: 100%;
+}
+.nav_ul>.nav_li:nth-of-type(1){
+    margin-left: 14%;
+}
+.nav_li >.nav_a{
+    padding: 20px 13px;
+    color: #fff;
+    text-decoration: none;
+    /* background: white; */
+    display: inline-block;
+    line-height: 37px;
+    font-size: 12px;
+    transition: .3s linear color;
+    font-weight: bolder;
+}
+.nav_li>.nav_a:hover{
+    color: #007bff;
+}
+.nav_search>a, .nav_cart>a, .nav_lang>a{
+    padding: 20px 6px;
+    line-height: 35px;
+    display: inline-block;
+    color: #fff;
+    font-size: 12px;;
+}
+.nav_ul .nav_dr{
+    position: relative;
+}
+/*--------------------------------Layout Dropdown Start----------------------*/
+.nav_dr_menu{
+    position: absolute;
+    min-width: 230px;
+    z-index: 2;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    padding: 15px 8px;
+    border-radius: 0px 0px 2px 2px;
+    box-shadow: 0px 0px 1px black;
+    background: white;
+    color: black;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+}
+.nav_li:hover .nav_dr_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.nav_dr_menu>.nav_dr_item>.dr_a{
+    display: block;
+    color: #222222;
+    padding: 10px 20px;
+    text-decoration: none;
+    font-size: 12px;;
+    font-family: sans-serif;
+    position: relative;
+}
+.nav_dr_menu>.nav_dr_item:not(.not_angle)>.dr_a::after{
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    color: black;
+    position: absolute;
+    top: 10px;
+    right: 25px;
+    font-size: 12px;
+    transition: .1s linear right;
+}
+.nav_dr_menu>.nav_dr_item>.dr_a:hover{
+    color: #007bff;
+}
+.nav_dr_menu>.nav_dr_item:hover>.dr_a::after{
+    right: 20px;
+}
+.nav_dr_menu>.nav_dr_item>.dr_a>#new{
+    font-size: 8px;
+    background: #dc3545;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.nav_dr_menu>.not_angle>.dr_a>#new{
+    background: #2250fc;
+    color: #fff;
+    padding: 3px 5px;
+    font-size: 8px;
+}
+.nav_dr_item{
+    position: relative;
+}                     
+     /*.............Sub Topbar+Together layout dropdown..................*/
+.sub_dr_menu{
+    position: absolute;
+    min-width: 230px;
+    z-index: 3;
+    margin: 0px;
+    padding: 0px;
+    list-style-type: none;
+    top: -10px;
+    left: 95%;
+    border-radius: 2px;
+    box-shadow: 0px 0px 1px black;
+    background: #fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity linear;
+}
+.sub_dr_menu>.sub_dr_item>.sub_a{
+    display: block;
+    padding: 10px 25px;
+    text-decoration: none;
+    font-size: 12px;
+    color: #222;
+    transition: .1s linear color;
+}
+.sub_dr_menu>.sub_dr_item>.sub_a:hover{
+    color: #007bff;
+}
+.nav_dr_item:hover>.sub_dr_menu{
+    opacity: 1;
+    visibility: visible;
+}
+                  /*...........Sub+Sub dropdown ..........*/
+.sub_dr_modern,
+ .sub_dr_logo,
+ .sub_dr_pp{
+    position: relative;
+}
+.sub_dr_modern::after,
+ .sub_dr_logo::after,
+ .sub_dr_pp::after{
+    position: absolute;
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 700;
+    top: 10px;
+    right: 25px;
+    transition: .1s right;
+    font-size: 12px;
+}
+.sub_dr_modern:hover::after,
+ .sub_dr_logo::after,
+ .sub_dr_pp::after{
+    right: 20px;
+}
+
+.sub_dr_modern:hover .sub_dr_menu ,
+ .sub_dr_logo:hover .sub_dr_menu,
+ .sub_dr_pp:hover .sub_dr_menu{
+    opacity: 1;
+    visibility: visible;
+}
+/*..........................Features Dropdown................................*/
+.fe_dropdown_menu{
+    position: absolute;
+    width: 230px;
+    box-shadow: 0px 0px 1px black;
+    margin: 0px;
+    padding: 0px;
+    background: white;
+    z-index: 2;
+    padding: 10px 0px;
+    border-radius: 3px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity linear;
+}
+.nav_li:hover .fe_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.fe_dropdown_menu>
+.fe_dropdown_item>
+.fe_dropdown_a{
+    display: block;
+    padding: 8px 30px;
+    color: #222;
+    text-decoration: none;
+    font-size: 12px;;
+    transition: .1s color;
+}
+.fe_dropdown_menu>
+.fe_dropdown_item>
+.fe_dropdown_a:hover{
+    color: #007bff;
+}
+.fe_dropdown_menu>.fe_dropdown_item{
+    position: relative;
+}
+.fe_dropdown_menu>
+.fe_dropdown_item:not(.fe_fa_not)::after{
+    content: "\f105";
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    color: black;
+    font-family: "Font Awesome 5 Free";
+    font-weight: 800;
+    transition: .2s right;
+    font-size: 12px;
+}
+.fe_dropdown_menu>
+.fe_dropdown_item:hover::after{
+    right: 25px;
+}
+                /*.......Sub Slide Dropdown with Together.........*/
+.sub_fe_dr_menu{
+    position: absolute;
+    width: 230px;
+    box-shadow: 0px 0px 1px black;
+    margin: 0px;
+    padding: 0px;
+    z-index: 3;
+    padding: 10px 0px;
+    border-radius: 3px;
+    top: 0px;
+    left: 95%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+}
+.fe_dropdown_item:hover .sub_fe_dr_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.sub_fe_dr_menu>
+.sub_fe_dr_item>
+.sub_fe_dr_a{
+    display: block;
+    padding: 8px 20px;
+    color: #222;
+    text-decoration: none;
+    font-size: 12px;
+    transition: .1s color;
+}
+.sub_fe_dr_menu>
+.sub_fe_dr_item>
+.sub_fe_dr_a:hover{
+    color: #007bff;
+}
+#lo_new, .lo_new{
+    font-size: 8px;
+    background: #dc3545;
+    padding: 2px 6px;
+    color: #fff;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+.lo_popular{
+    background: #28a745;
+}
+.lo_sale{
+    background: #ffc107;
+    color: black;
+}
+.lo_info{
+    background: #22a6bb;
+}
+/*............................Elegent Dropdown................................*/
+.ele_dropdown_menu{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 950px;
+    height: 450px;
+    left: -455px;
+    background: white;
+    margin: 0px auto;
+    overflow:  hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 0px 0px 8px 8px;
+    transition: 0s visibility, .5s opacity linear;
+    opacity: 0;
+    visibility: hidden;
+}
+.nav_li:hover .ele_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+/*.........................Layout Child Together Design........................*/
+.ele_dropdown_menu>.ele_flx_layout{
+    width: 16%;
+    height: 100%;
+}
+.flx_ul_menu{
+    margin: 0px;
+    padding: 0px;
+    padding-top: 18px;
+}
+.flx_ul_menu>
+.ele_flx_child>
+.ele_flx_child_a{
+    display: block;
+    padding: 7px 15px;
+    color: #222;
+    text-decoration: none;
+    transition: .3s color;
+    font-family: Poppins,Helvetica,Arial,sans-serif;
+}
+.flx_ul_menu>
+.ele_flx_child>
+.ele_flx_child_a:hover{
+    color: #007bff;
+}
+.flx_ul_menu>
+.ele_flx_child>
+.ele_flx_child_a>i{
+    margin-right: 12px;
+}
+.ele_flx_child_a #new{
+    font-size: 8px;
+    background: #e25a67;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+/*..............................Pages Dropdown................................*/
+.pag_dropdown_menu{
+    position: absolute;
+    width: 230px;
+    z-index: 2;
+    background: #fff;
+    margin: 0px;
+    padding: 0px;
+    box-shadow: 0px 0px 1px black;
+    padding: 15px 0px;
+    border-radius: 5px;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+}
+.nav_li:hover .pag_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.pag_dropdown_menu>
+.pag_dropdown_item>
+.pag_dropdown_a{
+    display: block;
+    color: #222;
+    font-size: 12px;;
+    text-decoration: none;
+    padding: 10px 35px;
+    transition: .3s color;
+
+}
+.pag_dropdown_menu>
+.pag_dropdown_item>
+.pag_dropdown_a:hover{
+    color: #007bff;
+}
+.pag_dropdown_menu>
+.pag_dr_angle{
+    position: relative;
+}
+.pag_dropdown_menu>
+.pag_dr_angle::after{
+    content: "\f105";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 600;
+    position: absolute;
+    top: 10px;
+    right: 30px;
+    color: black;
+    font-size: 12px;
+    transition: .1s linear right;
+}
+.pag_dropdown_menu>
+.pag_dr_angle:hover::after{
+    right: 25px;
+}
+                 /* ................Sub Page Dropdown Together................*/
+.sub_pag_dr_menu{
+    position: absolute;
+    z-index: 3;
+    width: 200px;
+    box-shadow: 0px 0px 1px black;
+    top: 0px;
+    left: 95%;
+    background: white;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+    margin: 0px;
+    padding: 0px;
+}                 
+.pag_dr_angle:hover .sub_pag_dr_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.sub_pag_dr_menu>
+.sub_pag_dr_item>
+.sub_pag_dr_a{
+    display: block;
+    font-size: 12px;;
+    text-decoration: none;
+    padding: 8px 22px;
+    color: #222;
+    transition: .1s color;
+}
+.sub_pag_dr_a>#new{
+    font-size: 8px;
+    background: #dc3545;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.sub_pag_dr_menu>
+.sub_pag_dr_item>
+.sub_pag_dr_a:hover{
+    color: #007bff;
+}
+/*...........................Portfolio Dropdown............................*/
+.port_dropdown_menu{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 950px;
+    height: 450px;
+    background: white;
+    left: -600px;
+    margin: 0px auto;
+    overflow:  hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+}
+.nav_li:hover .port_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.port_dropdown_menu>
+.port_dropdown_item{
+    width: 20%;
+    height: 100%;
+    color: #222;
+}
+         /*......................Sub Portfolio Dropdown.....................*/
+.sub_port_dr_menu{
+    margin: 0px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.sub_port_dr_menu>
+.sub_port_dr_item>
+.sub_port_dr_a{
+    text-decoration: none;
+    color: #222;
+    display: block;
+    padding: 10px 0px;
+    transition: .1s color;
+}
+.sub_port_dr_menu>
+.sub_port_dr_item>
+.sub_port_dr_a:hover{
+    color: #007bff;
+}
+.sub_port_dr_menu>
+.sub_port_dr_item>
+.sub_port_dr_title{
+    font-weight: 450;
+    font-size: 13px;
+}
+.sub_port_dr_a>#new{
+    font-size: 8px;
+    background: #dc3545;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+.sub_port_dr_menu 
+.view_hover_cc{
+    position: absolute;
+    top: 82%;
+    left: 75%;
+    text-decoration: none;
+    color:  black;
+    font-size: 15px;
+    text-transform: uppercase;
+    display: inline-block;
+    width: 202px;
+    box-shadow: 0px 0px 1px black;
+    padding: 9px 17px;
+    text-align: center;
+    transition: .5s box-shadow;
+}
+.sub_port_dr_menu
+.view_hover_cc:hover{
+    box-shadow: 0px 0px 3px black;
+}
+/*.............................Blog Dropdown................................*/
+.blog_dropdown_menu{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 950px;
+    height: 450px;
+    left: -690px;
+    margin: 0px auto;
+    background: white;
+    overflow:  hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, .5s opacity;
+}
+.nav_li:hover .blog_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.blog_dropdown_menu>
+.blog_dropdown_item{
+    width: 20%;
+    height: 100%;
+    color: #222;
+}
+                /*................Sub blog Dropdown...........*/
+.sub_blog_dr_menu{
+    margin: 0px;
+    padding-left: 25px;
+    padding-top: 15px;
+}
+.sub_blog_dr_menu>
+.sub_blog_dr_item>
+.sub_blog_dr_a{
+    text-decoration: none;
+    color: #222;
+    display: block;
+    padding: 10px 0px;
+    transition: .1s color;
+}
+.sub_blog_dr_menu>
+.sub_blog_dr_item>
+.sub_blog_dr_a:hover{
+    color: #007bff;
+}
+.sub_blog_dr_menu>
+.sub_blog_dr_item>
+.sub_blog_dr_title{
+    font-weight: 450;
+    font-size: 13px;
+}
+.sub_blog_dr_item #new{
+    font-size: 8px;
+    background: #dc3545;
+    color: #fff;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+/*............................Shop Dropdown..............................*/
+.shop_dropdown_menu{
+    margin: 0px;
+    padding: 0px;
+    position: absolute;
+    width: 950px;
+    height: 450px;
+    left: -750px;
+    background: white;
+    margin: 0px auto;
+    overflow:  hidden;
+    z-index: 2;
+    box-shadow: 0px 0px 1px black;
+    display: flex;
+    justify-content: space-around;
+    font-size: 12px;
+    border-radius: 0px 0px 8px 8px;
+    display: flex;
+    opacity: 0;
+    visibility: hidden;
+    transition: 0s visibility, opacity .5s linear;
+}
+.nav_li:hover .shop_dropdown_menu{
+    opacity: 1;
+    visibility: visible;
+}
+.shop_dropdown_menu>
+.shop_dropdown_item{
+    width: 20%;
+    height: 100%;
+    color: #222;
+}
+             /*-------------Sub Shop Dropdown--------------------*/
+.sub_shop_dr_menu{
+             margin: 0px;
+         padding-left: 25px;
+         padding-top: 15px;
+ }
+.sub_shop_dr_menu>
+.sub_shop_dr_item>
+.sub_shop_dr_a{
+         text-decoration: none;
+         color: #222;
+         display: block;
+         padding: 10px 0px;
+         transition: .1s color;
+ }
+.sub_shop_dr_menu>
+.sub_shop_dr_item>
+.sub_shop_dr_a:hover{
+             color: #007bff;
+ }
+.sub_shop_dr_menu>
+.sub_shop_dr_item>
+.sub_shop_dr_title{
+         font-weight: 450;
+         font-size: 13px;
+ }
+ .shop_dr_ready{
+     padding: 30px 0px;
+     font-family: sans-serif;
+     font-weight: 900;
+ }
+ .shop_dr_sell #yo_sell{
+     font-size: 20px;
+     color: #007bff;
+     text-transform: uppercase;
+ }
+ .shop_dr_sell #up_to_sell{
+     font-size: 16px;
+     color: grey;
+     font-weight: 100;
+ }
+ .shop_dr_sell #sell_discount{
+     font-size: 80px;
+     color: #2250fc;
+     display: inline-block;
+     padding-bottom: 40px;
+ }
+ .shop_dr_ready strong{
+     font-size: 16px;
+     color: grey;
+     font-weight: 300;
+     line-height: 28px;
+ }
+ .shop_dr_ready .shop_now{
+     display: block;
+     text-align: center;
+     font-size: 14px;
+     font-weight: 450;
+     background: #2250fc;
+     color: white;
+     padding: 6px 12px;
+     text-decoration: none;
+     border-radius: 50px;
+     text-transform: uppercase;
+ }
+ .shop_dr_ready .limited{
+     text-align: center;
+     font-size: 12px;
+     font-style: italic;
+     font-weight: 100;
+     padding-top: 5px;
+     color: grey;
+ }
+ /*.............................Header All Dropdown End...........................*/
+ .header_letter{
+     position: absolute;
+     top: 50%;
+     left: 50%;
+     transform: translate(-50%, -50%);
+     color: white;
+     text-align: center;
+     width: 80%;
+     margin-top: 80px;
+ }
+ #polo_letter{
+     text-transform: uppercase;
+     font-size: 120px;
+     font-weight: 900;
+   
+ }
+ #polo_below{
+     font-size: 44px;
+     margin-top: -30px;
+     font-weight:500;
+ }
+ .polo_h{
+     font-weight: 350;
+ }
+ .polo_a{
+
+     color: white;
+     background: #132a7e;
+     display: inline-block;
+     padding: 7px 25px;
+     border-radius: 25px;
+     text-decoration: none;
+     text-transform: uppercase;
+     transition: background .3s ;
+ }
+ .polo_a:hover{
+    background: #0232e7;
+ }
+/*------------------------------------------Header and Nav End--------------------------------*/
+.sec_1{
+    width: 100%;
+    min-height: 3000px;
+    background: hsl(225, 33%, 98%);
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 40px;
+    position: relative;
+    overflow: hidden;
+}
+.sec_1_layout{
+
+    min-height: 100%;
+    
+}
+.sec_1_layout:nth-of-type(1){
+    flex-basis: 25%;
+}
+.sec_1_layout:nth-of-type(2){
+    flex-basis:  70%;
+}
+/*......................................Section_1 left side work.............................*/
+.nth_1_title_se{
+    margin-top: 0px;
+    padding-left: 30px;
+    font-weight: 400;
+    font-size: 16px;
+    letter-spacing: 1.8px;
+    text-transform: uppercase;
+}
+.sec_1 .sec_1_left_list{
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    padding-left: 30px;
+}
+.sec_1 .sec_1_left_list .left_sec_1_item{
+    display: inline-block;
+    color: black;
+    text-decoration: none;
+    padding: 8px 15px;
+    font-size: 14px;
+    transition: background linear .3s ;
+    border-radius: 20px;
+}
+button.left_sec_1_item{
+    background: blue;
+    border-radius: 20px;
+    color: white!important;
+    padding: 8px 10px!important;
+    display: inline-block;
+    border: none;
+    margin-top: 50px!important;
+    margin-bottom: 10px!important;
+}
+.sec_1 .sec_1_left_list .left_sec_1_item:hover{
+    background: blue;
+    color: white;
+    
+ 
+}
+.left_sec_1_item #new{
+    font-size: 10px;
+    display: inline-block;
+    padding: 3px 8px;
+    background: red;
+    color: white;
+    border-radius: 15px;
+    vertical-align: sub;
+}
+/*.....................................Section 1 Right Side Work.............................*/
+.sec_1_right_menu{
+    display: flex;
+    flex-flow: row wrap;
+    position: relative;
+    justify-content: space-between;
+}
+.sec_1_right_menu .sec_1_right_item{
+    flex-basis: 30%;
+    height: 150px;
+  
+}
+.sec_1_right_item>.item_child{
+    width: 100%;
+    height: 100%;
+    display: block;
+  
+    position: relative;
+}
+.sec_1_right_item>.item_child img{
+    width: 100%;
+    height: 100%;
+}
+.sec_1_right_item>.item_child>.item_position_text{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    opacity: 0;
+    transition: .1s linear opacity;
+   
+}
+.sec_1_right_item>.item_child:hover>.item_position_text{
+    opacity: 1;
+}
+.item_child >.item_position_text>span{
+    transform: translateY(20px);
+    transition: .3s linear transform;
+    text-transform: uppercase;
+}
+.item_child:hover>.item_position_text>span{
+    transform: translateY(0px);
+}
+.new_polo{
+    position: absolute;
+    width: 40px;
+    height: 40px;
+    background: #be0027;
+    z-index: 333;
+    top: 4px;
+    left: 88%;
+    border-radius:  50%;
+    text-align:  center;
+    line-height: 40px;
+    color: white;
+    text-transform: uppercase;
+    font-size: 11px;
+    font-weight: bolder;
+}
+/*..........................................Section 1 End...................................*/
+.sec_2{
+    min-height: 1000px;
+    display: flex;
+    justify-content: space-evenly;
+}
+.sec_2>.sec_2_layout{
+    min-height: 100%;
+    margin-top: 50px;
+}
+.sec_2>.sec_2_layout:nth-of-type(1){
+    flex-basis: 25%;
+}
+.sec_2>.sec_2_layout:nth-of-type(2){
+    flex-basis: 70%;
+}
+.sec_2_left_title{
+    padding-bottom: 35px;
+    border-bottom: 1px solid rgb(201, 199, 199);
+}
+.sec_2_left_title h4{
+    font-weight: 400;
+    word-spacing: 3px;
+}
+.sec_2_left_title>.n_ready{
+    font-size: 14px;
+    color: rgb(82, 80, 80);
+    display: flex;
+}
+.sec_2_left_title>.n_ready span{
+    font-size: 50px;
+    display: inline-block;
+    margin-top: -20px;
+    color: #0127ff;
+    font-weight: bolder;
+    padding-right: 2px;
+}
+.sec_2_left_menu{
+    margin: 0px;
+    padding: 0px;
+    list-style: none;
+}
+.sec_2_left_menu>.sec_2_left_item{
+    display: block;
+    font-size: 13px;
+    padding: 10px ;
+    text-decoration: none;
+    color: black;
+}
+.all_filters{
+    color: #0127ff!important;
+}
+.sec_2_left_menu>.sec_2_left_item:not(.all_filters):hover{
+    color: #0127ff;
+}
+.sec_2_bellow{
+    margin-top: 100px;
+}
+.img_wrapper{
+    height: 150px;
+    position: relative;
+}
+.img_wrapper img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.sec_2_bellow p{
+    margin: 0px;
+    font-size: 13px;
+    color: rgb(92, 83, 83);
+    padding: 11px;
+}
+.sec_2_right_layout{
+    display: flex;
+    flex-flow: row wrap;
+    align-content: flex-start;
+    justify-content: space-between;
+}
+.sec_2_right_layout>.sec_2_right_item{
+    flex-basis: 30%;
+    height: 150px;
+    position: relative;
+
+}
+.sec_2_right_item>.link{
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+.sec_2_right_item>.link>img{
+    width: 100%;
+    height: 100%;
+}
+.sec_2_po_text{
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    right: 15px;
+    bottom: 15px;
+    background: white;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: .1 linear opacity;
+}
+.sec_2_right_item:hover .sec_2_po_text{
+    opacity: 1;
+}
+.sec_2_po_text span{
+    transform: translateY(15px);
+    transition: .3s linear transform;
+    text-transform: uppercase;
+    display: inline-block;
+    padding: 0px 20px;
+}
+.sec_2_right_item:hover .sec_2_po_text span{
+    transform: translateY(0px);
+}
+.sec_2_po_custom{
+    margin-right: 245px!important;
+}
+#sec_2_bellow_t{
+    padding: 0px 15px;
+    display: inline-block;
+}
+.sec_3{
+    height: 873px;
+    background: #333;
+    margin-top: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    text-align: center;
+    padding: 0px 70px;
+}
+.sec_3_center span:nth-child(1){
+    display: block;
+    font-size: 60px;
+    margin: 20px;
+}
+.sec_3_center span:nth-child(2){
+    display: block;
+}
+.sec_3_center #everything{
+    display: inline-block;
+    font-size: 20px;
+    padding: 15px 35px;
+    color: white;
+    text-decoration: none;
+    background: #ca0027;
+    text-transform: uppercase;
+    transition: .2s linear background;
+    border-radius: 5px;
+    margin-top: 25px;
+}
+.sec_3_center #everything:hover{
+    background: #97001d;
+}
+.go_to_top{
+   all: initial;
+   position: fixed;
+   z-index: 100;
+   top: 88vh;
+   left: 88vw;
+}
+.go_to_top>a{
+    display: block;
+    background: hsla(0, 0%, 0%,.3);
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    text-align: center;
+    color: white;
+    line-height: 40px;
+}
+.go_to_top>a:hover::after{
+    background: #2250fc;
+    content: "\f077";
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    border-radius: 50%;
+    animation: go_to .2s ease alternate;
+    box-shadow: 0px 0px 10px blue;
+    transform-origin: top;
+}
+@keyframes go_to{
+    0%{
+        transform:  scale(0,0) translateY(10px);
+    }
+    100%{
+        transform: scale(1,1)  translateY(0px);
+    }
+}
