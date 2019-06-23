@@ -1287,6 +1287,21 @@ button.left_sec_1_item{
     left: 9%;
     transform-origin: top left;
    }
+   .sec_1_right_menu 
+   .sec_1_right_item{
+       flex-basis: 45%;
+       height: auto;
+   }
+   .sec_2_right_layout>.sec_2_right_item{
+       flex-basis: 45%;
+       height: auto;
+   }
+   .sec_1_layout:nth-of-type(1){
+       order: 2;
+   }
+   .sec_1_layout:nth-of-type(2){
+       order: 1;
+   }
    }
 
 /*......................Computer/Laptop Responsive >992px...............*/
@@ -1320,5 +1335,25 @@ button.left_sec_1_item{
     }
     .list_wrapper>li>ul{
         display: none;
+    }
+    .sec_1_right_menu 
+    .sec_1_right_item{
+        flex-basis: 45%;
+        height: auto;
+    }
+    .sec_2_right_layout>.sec_2_right_item{
+        flex-basis: 45%;
+        height: auto;
+    }
+}
+@media screen and (max-width: 578px){
+    .sec_1_right_menu 
+    .sec_1_right_item{
+        flex-basis: 49%;
+        height: auto;
+    }
+    .sec_2_right_layout>.sec_2_right_item{
+        flex-basis: 49%;
+        height: auto;
     }
 }
